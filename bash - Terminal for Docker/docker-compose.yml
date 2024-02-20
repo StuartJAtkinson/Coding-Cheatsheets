@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  my-bash:
+      #image: python:3.12
+      build:
+          context: "."
+      restart: always
+      volumes:
+          - ./app:/app/    
+      stdin_open: true 
+      tty: true
+      #command: /bin/bash
